@@ -202,14 +202,36 @@ article section:nth-of-type(odd) figcaption {text-align: right}
 /*3段組み*/
 article div[itemprop="articleBody"]
             {display: -webkit-box;
+             display: -moz-box;
+             display: -ms-box;
 }
 
 article section {width: 288px;
                  margin-right: 18px;
-                 box-sizing: border-box;}
+                 box-sizing: border-box;
+                 -moz-box-sizing: border-box;
+                 -webkit-box-sizing: border-box;
+                 overflow: visible;}
 
 article section h1 {height: 48px;
                     line-height: 1.2}
+
+article section:nth-of-type(1n) figure {float: none;
+                                       margin 0;
+                                       }
+
+article section:nth-of-type(1n) figcaption {text-align: center;
+                                            margin-bottom: 15px;}
+
+/*3段組み　IE8～9 Opera */
+article section {clear: none;
+                 float: left;
+                 position: relative;
+             }
+
+article + section + section {margin: 0}
+
+
 
 
 
@@ -245,6 +267,16 @@ article section
 </style>
 
 <![endif]-->
+
+<!--[if lt IE 8]>
+<style>
+
+
+article section {width: 250px}
+article section figure {margin-left:0}
+
+</style>
+<![endif]
 
 </head>
 <body>
