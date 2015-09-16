@@ -199,6 +199,9 @@ article section figcaption {color: #666666;
 
 article section:nth-of-type(odd) figcaption {text-align: right}
 
+/*============PC用の設定-----------------*/
+@media only screen and (min-width: 900px) {
+
 /*3段組み*/
 article div[itemprop="articleBody"]
             {display: -webkit-box;
@@ -231,11 +234,18 @@ article section {clear: none;
 
 article + section + section {margin: 0}
 
+}
 
+/*タブレット用の設定================*/
 
+@media only screen and (min-width: 600px) and (max-width: 899px)
+{
 
-
-
+    div#container {width: 100%;
+                   box-sizing: border-box;
+                   -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;}
+}
 
 </style>
 <!--[if lt IE 9]
