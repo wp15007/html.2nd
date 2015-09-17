@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>森の工房 [Forest Studio] - 森の工房について</title>
-<meta neme="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width,maximum-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 <style>
 
@@ -314,6 +314,46 @@ article section figure {float: right;
 nav li a {border-right: solid 1px #ffffff}
 
 nav li a:hover {background-color: #017acd}
+
+/* 3段組み */
+article div[itemprop="articleBody"]
+                     {display: -webkit-box;
+                      display: -moz-box;
+                      display: -ms-box;
+                      }
+article section  {width: 288px;
+                  margin-right: 18px;
+                  box-sizing: border-box;
+                  -webkit-box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  overflow: visible}
+
+article section h1 {height: 48px;
+                    line-height: 1.2}
+
+article section:nth-of-type(1n) figure
+                   {float: none;
+                    margin: 0}
+
+article seciton:nth-of-type(1n) figcaption
+                   {text-align: center;
+                    margin-bottom: 15px;
+                    }
+
+/* 3段組み IE8～9 & Opera */
+article section {clear: none;
+                 float: left;
+                 position: relative;}
+
+article section + section + section {margin-right: 0}
+
+
+
+
+
+
+
+
 
 <![endif]-->
 <!--[if lt IE 10]
