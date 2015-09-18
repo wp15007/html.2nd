@@ -4,29 +4,30 @@
 <meta charset="utf-8">
 <title>森の工房 [Forest Studio] - 森の工房について</title>
 <meta name="viewport" content="width=device-width,maximum-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'><!--webフォントRighteousの使用-->
 <style>
 
 body {font-family: ' メイリオ ','hiragino kaku Gothic Pro' sans-serif;
-      background-color: #e5e5e5;
+      background-color: #e5e5e5;/* ページ全体の背景色をつける */
       margin 0;
      }
 
 a	{color: #017acd}
 
 /* コンテナ */
-div#container	{width: 900px;
+div#container	{width: 900px;/* ワイド画面対応760px→900px */
 	margin-left: auto;
 	margin-right: auto;
-    background-color: #ffffff;
-    padding: 0 40px;
+    background-color: #ffffff;/* コンテンツ全体の背景色をつける */
+    padding: 0 40px;/* コンテンツの左右に余白をつける */
     -wibkit-box-shadow: 0 0 50px #bbbbbb;
     box-shadow: 0 0 50px #bbbbbb;
-    background-image: url(circle.png), url(circle-yellow.png);
-    background-repeat: no-repeat;
+    background-image: url(circle.png), url(circle-yellow.png);/* 背景画像を付ける */
+    background-repeat: no-repeat;/* 背景画像の繰り返しをやめる */
     background-position: 15px 420px, 90px 500px;
     background-size: 94px 94px, 30px 30px;
     position: relative;
+    overflow: hidden;/* リボンのはみ出し部分を隠す */
 
 
     }
@@ -34,7 +35,7 @@ div#container	{width: 900px;
 /* ヘッダー */
 header#pageheader	{background-color: none;
 	                 padding: 15px 0 0;
-                     font-family: 'Righteous', cursive;}
+                     font-family: 'Righteous', cursive;}/* headで指定したフォントRighteousを使用 */
 
 header#pageheader img {
                   -webkit-box-shadow: 0px 2px 3px #cccccc;
@@ -91,15 +92,15 @@ nav ul li a:hover	{background-color: rgba(1,122,205,0.3);
 nav ul li:first-of-type a:hover {border-radius: 5px 0 0 5px;}
 
 /* コンテンツ */
-article	{width: auto px;
+article	{width: auto ;/* 記事の横幅を固定せず全体の幅に合わせるためにautoを選択 */
 	margin-left: auto;
 	margin-right: auto}
 
 article header {border:solid 1px #aaaaaa;
-                margin: 20px 0 10px;
+                margin: 20px 0 10px;/* 記事ヘッダーを枠線で囲む */
                 padding: 18px;
-                border-radius: 5px;
-                -webkit-box-shadow: 0 2px 3px #cccccc, 0px 0px 4px 3px #ffffff inset ;
+                border-radius: 5px;/* 枠線を5pxの角丸にする */
+                -webkit-box-shadow: 0 2px 3px #cccccc, 0px 0px 4px 3px #ffffff inset ;/* ぼかし付きの影を枠の内側insetにつける */
                 box-shadow: 0px 2px 3px #CCCCCC, 0px 0px 4px 3px #ffffff inset ;
                 background-color: rgba(255,255,255,0.5);
 
@@ -113,23 +114,23 @@ article header h1	{background-color: none;
 								padding-left: 0;
 								margin: 0;
 							    font-weight: normal;
-							    float: left;}
+							    float: left;}/* 記事タイトルを左にフロートすることでと記事タイトルとリード文を横並びに表示 */
 
 article header p {font-size: 16px;
                   color: #444444;
                   margin-left: 300px;}
 
-article section {clear: both;
+article section {clear: both;/* 記事の回り込みを回避 */
                  border: solid 1px #aaaaaa;
                  margin: 20px 0 10px;
                  padding: 18px;
                  border-radius: 5px;
-                 overflow: hidden;
-                 background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(##dfdfdf));
-                 background: -webkit-linear-gradient(0deg, #ffffff 0%, #dfdfdf 100%);
-                 background: -moz-linear-gradient(0deg, #ffffff 0%, #dfdfdf 100%);
-                 background: -o-linear-gradient(0deg, #ffffff 0%, #dfdfdf 100%);
-                 background: -ms-linear-gradient(0deg, #ffffff 0%, #dfdfdf 100%);
+                 overflow: hidden;/* 画像を枠内に収める */
+                 background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(##dfdfdf));
+                 background: -webkit-linear-gradient(270deg, #ffffff 0%, #dfdfdf 100%);
+                 background: -moz-linear-gradient(270deg, #ffffff 0%, #dfdfdf 100%);
+                 background: -o-linear-gradient(270deg, #ffffff 0%, #dfdfdf 100%);
+                 background: -ms-linear-gradient(270deg, #ffffff 0%, #dfdfdf 100%);
                  -webkit-box-shadow: 0 2px 3px #cccccc, 0px 0px 4px 3px #ffffff inset;
                  box-shadow: 0px 2px 3px #CCCCCC, 0px 0px 4px 3px #ffffff inset;}
 
@@ -165,7 +166,7 @@ small	{font-size: 10px;
 	text-align: left;
     display: block}
 
-small::before {content: 'GREEN LEAF';
+small::before {content: 'GREEN LEAF';/* smallの直前にサイト名のリボンを挿入し（before）表示する */
                display: block;
                width: 200px;
                padding: 10px 0;
@@ -177,50 +178,50 @@ small::before {content: 'GREEN LEAF';
                position: absolute;
                right: 0;
                bottom: 0;
-               -webkit-transform: rotate(-45deg) translate(62px, 20px);
+               -webkit-transform: rotate(-45deg) translate(62px, 20px);/* -45度の角度をつけ右に62px、下に20px移動させる */
                -moz-transform: rotate(-45deg) translate(62px, 20px);
                -o-transform: rotate(-45deg) translate(62px, 20px);
                -ms-transform: rotate(-45deg) translate(62px, 20px);
-               overflow: hideen;}
+               }
 
 /* 画像の配置 */
 figure {margin: 0;}
 
-article section:nth-of-type(odd) figure{float: right;
+article section:nth-of-type(odd) figure{float: right;/* 奇数番目(odd)の画像を右寄せ */
 	margin-left: 15px;
 	margin-bottom: 0}
 
-article section:nth-of-type(even) figure	{float: left;
+article section:nth-of-type(even) figure	{float: left;/* 偶数番目(even)の画像を左寄せ */
 	margin-right: 15px;
 	margin-bottom: 0}
 
 article section figcaption {color: #666666;
 	                        font-size: 10px;
-	                        display: block;}
+	                        display: block;}/*スマホでインライン表示されることをblockで回避*/
 
-article section:nth-of-type(odd) figcaption {text-align: right}
+article section:nth-of-type(odd) figcaption {text-align: right}/*奇数番目のキャプションを右揃え*/
 
 /*============PC用の設定-----------------*/
 @media only screen and (min-width: 900px) {
 
 /*3段組み*/
-article div[itemprop="articleBody"]
+article div[itemprop="articleBody"]/*フレキシブルボックスレイアウトを利用してsection3つをまとめたdivに指示を出す*/
             {display: -webkit-box;
              display: -moz-box;
              display: -ms-box;
 }
 
 article section {width: 288px;
-                 margin-right: 18px;
+                 margin-right: 18px;/*ページの幅が900pxのため3段組みにするには288+間隔18+288+18+288*/
                  box-sizing: border-box;
                  -moz-box-sizing: border-box;
                  -webkit-box-sizing: border-box;
                  overflow: visible;}
 
-article section h1 {height: 48px;
-                    line-height: 1.2}
+article section h1 {height: 48px;/*見出し部分の高さをそろえる*/
+                    line-height: 1.2}/*行間は1.2*/
 
-article section:nth-of-type(1n) figure {float: none;
+article section:nth-of-type(1n) figure {float: none;/*figureで指定したfloatを解除（縦に並ぶために回り込みは発生しない）*/
                                        margin 0;
                                        }
 
@@ -241,7 +242,7 @@ article + section + section {margin: 0}
 
 @media only screen and (min-width: 600px) and (max-width: 899px){
 
-    div#container {width: 100%;
+    div#container {width: 100%;/*コンテンツの幅を画面の幅に合わせる*/
                    box-sizing: border-box;
                    -webkit-box-sizing: border-box;
                    -moz-box-sizing: border-box;
@@ -249,8 +250,8 @@ article + section + section {margin: 0}
                    background-position: -3px 380px, 100px 460px;
                     }
 
-    header#pageheader img {width: 100%;
-                           height: auto;
+    header#pageheader img {width: 100%;/*画像の幅を画面の幅に合わせる*/
+                           height: auto;/*横幅を縦横比に合わせる*/
                        }
 
     nav ul {font-size: 10px;}
@@ -286,12 +287,12 @@ article + section + section {margin: 0}
                           text-align: left;
                           padding: 0}
 
-    article header h1 {float: none;}
+    article header h1 {float: none;}/*記事ヘッダー段組みを解除*/
 
     article header p {margin: 0}
 
     article section:nth-of-type(1n) figure
-                             {float: none;
+                             {float: none;/*記事の段組みを解除*/
                              	margin:0;
                              	text-align: center;
                               display: block
@@ -391,8 +392,7 @@ article section figure {margin-left:0}
     var ctx = canvas.getContext('2d');
 
   ctx.arc(14,14,14,0,Math.PI*2,true);
-  ctx.fillStyle = "#" + Math.floor(Math.random()
-                  *256*256*256).toString(16);
+  ctx.fillStyle = "#" + Math.floor(Math.random()*256*256*256).toString(16);
   ctx.fill();
   }
   }
@@ -447,7 +447,7 @@ Green Leaf</h1>
 </blockquote> （アウトラインに表示させないのがblockquote）-->
 
 <figure><img src="photo01.jpg" alt="森の中の様子" width="250" height="165">
-<figcaption>工房へ続く森の中の道</figcaption></figure>
+<figcaption>工房へ続く森の中の道</figcaption></figure><!--画像の注釈-->
 <p>森の工房は、木々のあふれる森の中にあります。森の入口から細い小道を通り、森の奥に進んでください。しばらくすると、森の中にある小さな丘に出てきます。その丘の上にある木造の建物が「森の工房」です。</p>
 
 <p>この丘はちょうど森の中央に位置しており、森の中を散歩したり、自然の中で遊んだりするときにも、ちょうどいい拠点になります。森全体を見渡すことも可能で、夜は満点の星空を満喫できます。</p>
